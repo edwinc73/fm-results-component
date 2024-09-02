@@ -7,11 +7,11 @@ function SummaryItem({ data }) {
 
   return (
     <div
-      className={`flex justify-between font-hanken text-base p-3 ${bgColor} bg-opacity-5 rounded-lg `}
+      className={`flex justify-between font-hanken text-base p-3 ${bgColor} bg-opacity-[5%] rounded-lg `}
     >
-      <div className="summaryItem__title flex gap-3">
+      <div className="summaryItem__title flex gap-3 items-center">
         <img src={icon} alt={category} className="w-5 h-5" />
-        <span className={cx(" text font-medium ", textColor)}>{category}</span>
+        <span className={cx(" text font-semibold", textColor)}>{category}</span>
       </div>
       <div className="summaryItem__score flex gap-1 items-baseline">
         <span className="font-bold mr-1 text-dark-blue">{score}</span>
@@ -30,5 +30,7 @@ SummaryItem.propTypes = {
     icon: PropTypes.string.isRequired,
     score: PropTypes.number.isRequired,
     color: PropTypes.string.isRequired,
+    bgColor: PropTypes.string.isRequired,
+    textColor: PropTypes.string.isRequired,
   }).isRequired,
 };
